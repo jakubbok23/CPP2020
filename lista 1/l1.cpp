@@ -6,16 +6,6 @@ using namespace std;
 
 vector<int64_t>(output);
 
-bool is_prime(int64_t in)
-{
-    auto root=static_cast<int64_t>(sqrt(in));
-    for(int i=2;i<root;i++)
-    {
-        if(in%i==0)return false;
-    }
-    return true;
-}
-
 void doin_thins(int64_t in,int64_t prime)
 {
     if(in==1)return;
@@ -95,7 +85,7 @@ int main(int argc,char* argv[])
                 }
                 output.clear();
             }
-            catch(const std::exception& e)
+            catch(const exception& e)
             {
                 cerr<<"invalid argument:"<<e.what()<<endl;
             }
