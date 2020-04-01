@@ -14,9 +14,21 @@ class stos
     string sprawdz();
     int rozmiar();
     stos odwroc();
-    friend ostream& operator<<(ostream &wyj,const stos &);
-    stos& operator=(stos &&);
-    stos& operator=(const stos&);
+    friend ostream& operator<<(ostream &,const stos &);
+    stos& operator=(stos &&from)
+    {
+        pojemnosc=move(from.pojemnosc);
+        ile=move(ile);
+        stoss=move(stoss);
+        return *this;
+    }
+    stos& operator=(const stos &from)
+    {
+        pojemnosc=from.pojemnosc;
+        ile=from.ile;
+        stoss=from.stoss;
+        return *this;
+    }
     stos();
     stos(const int&);
     stos(initializer_list<string>);

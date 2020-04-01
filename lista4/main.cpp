@@ -76,8 +76,8 @@ int main()
             {
                 if(X!=nullptr)
                 {
-                    cout<<"Odwrocony stos :"<<endl;
-                    cout<<X->odwroc();
+                    stos XD=X->odwroc();
+                    X=&XD;
                 }
                 else
                     blad
