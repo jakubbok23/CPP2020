@@ -56,8 +56,10 @@ using namespace std;
     stos::stos(initializer_list<string> from):pojemnosc(from.size()),stoss(new string[from.size()]),ile(from.size())
     {
         int i=0;
-        for(string x:from)
-            stoss[i]=x;
+        for(string x:from) {
+            stoss[i] = x;
+            i++;
+        }
     }
     stos::stos(const stos& from):pojemnosc(from.pojemnosc), stoss(new string[from.pojemnosc]),ile(from.ile)
     {
